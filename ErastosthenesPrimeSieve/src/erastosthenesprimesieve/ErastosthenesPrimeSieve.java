@@ -12,19 +12,19 @@ package erastosthenesprimesieve;
 public class ErastosthenesPrimeSieve {
     
     double MAX;
+    boolean[] notPrime;
 
     public ErastosthenesPrimeSieve(int max){
         this.MAX = max;
     }
     
     public boolean isPrime(int i){
-        boolean isPrime = false;
-        return isPrime;
+        return notPrime[i+2];
     }
     
     public void printPrimes(){
         
-        boolean[] notPrime = new boolean[Integer.parseInt(MAX-2.0)];
+        notPrime = new boolean[Integer.parseInt(MAX-2.0)];
         
         for(int i=2;i<MAX;i++){
            notPrime[i] = false;
